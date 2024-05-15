@@ -1,0 +1,11 @@
+{% paginate collection.products by 6 %}
+  {% for product in collection.products %}
+    <a href="{{ product.url }}">
+      {{ product.title }}</a>
+  {% else %}
+    <p>Sorry, no products in this collection</p>
+  {% endfor %}
+
+  {% comment %} {% render 'pagination' %} {% endcomment %}
+
+{% endpaginate %}
